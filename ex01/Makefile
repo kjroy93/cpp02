@@ -2,7 +2,7 @@
 #             VARIABLES                   #
 ###########################################
 
-NAME			=	fixed_number
+NAME			=	fixed_point_number
 OBJ_DIR			=	obj
 SRC				= 	src/Fixed.cpp	\
 					main.cpp
