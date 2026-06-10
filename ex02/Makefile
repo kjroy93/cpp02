@@ -7,7 +7,7 @@ OBJ_DIR			=	obj
 SRC				= 	src/Fixed.cpp	\
 					main.cpp
 INCLUDES		=	include
-CPP				=	g++
+CPP				=	c++
 CPPFLAGS		=	-Wall -Werror -Wextra -std=c++98 -I$(INCLUDES) -g
 OBJ				=	$(patsubst %.cpp, $(OBJ_DIR)/%.o, $(SRC))
 
