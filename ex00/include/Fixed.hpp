@@ -3,16 +3,18 @@
 /*                                                        :::      ::::::::   */
 /*   Fixed.hpp                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: kjroydev <kjroydev@student.42.fr>          +#+  +:+       +#+        */
+/*   By: kmarrero <kmarrero@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/06/05 19:09:19 by kjroydev          #+#    #+#             */
-/*   Updated: 2026/06/05 19:53:35 by kjroydev         ###   ########.fr       */
+/*   Updated: 2026/07/05 17:39:48 by kmarrero         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #ifndef FIXED_CPP
 # define FIXED_CPP
 # include <iostream>
+# include <climits>
+# include <string>
 
 class	Fixed
 {

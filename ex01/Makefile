@@ -8,7 +8,7 @@ SRC				= 	src/Fixed.cpp	\
 					main.cpp
 INCLUDES		=	include
 CPP				=	c++
-CPPFLAGS		=	-Wall -Werror -Wextra -std=c++98 -I$(INCLUDES) -g
+CPPFLAGS		=	-Wall -Werror -Wextra -std=c++98 -I$(INCLUDES) -MMD -MP -g
 OBJ				=	$(patsubst %.cpp, $(OBJ_DIR)/%.o, $(SRC))
 
 ###########################################
@@ -24,6 +24,12 @@ $(NAME): $(OBJ)
 $(OBJ_DIR)/%.o: %.cpp
 	@mkdir -p $(dir $@)
 	@$(CPP) $(CPPFLAGS) -c $< -o $@
+
+###########################################
+#                 INCLUDE                 #
+###########################################
+
+-include $(OBJ=.o=.d)
 
 ###########################################
 #               CLEANING                  #
