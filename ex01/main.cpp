@@ -6,16 +6,16 @@
 /*   By: kmarrero <kmarrero@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/06/07 15:15:18 by kmarrero          #+#    #+#             */
-/*   Updated: 2026/06/07 15:39:43 by kmarrero         ###   ########.fr       */
+/*   Updated: 2026/07/05 18:41:21 by kmarrero         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "Fixed.hpp"
 
-int main( void )
+int main(void)
 {
 	Fixed a;
-	Fixed const b( 10 );
+	Fixed const b( INT_MAX );
 	Fixed const c( 42.42f );
 	Fixed const d( b );
 

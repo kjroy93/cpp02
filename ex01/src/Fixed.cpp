@@ -6,7 +6,7 @@
 /*   By: kmarrero <kmarrero@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/06/05 19:19:21 by kjroydev          #+#    #+#             */
-/*   Updated: 2026/06/07 15:28:28 by kmarrero         ###   ########.fr       */
+/*   Updated: 2026/07/05 18:45:08 by kmarrero         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,13 +20,38 @@ Fixed::Fixed()
 
 Fixed::Fixed(const int number)
 {
+	const int max_fixed = INT_MAX / (1 << fract_);
+	const int min_fixed = INT_MIN / (1 << fract_);
+
 	std::cout << "Int constructor called" << std::endl;
+	if (number > INT_MAX / (1 << fract_) ||
+		number < INT_MIN / (1 << fract_))
+	{
+		std::cout << "Int out of range. Max representation created" << std::endl;
+		if (number > max_fixed)
+			this->fixed_value = max_fixed << fract_;
+		else
+			this->fixed_value = min_fixed * (1 << fract_);
+		return ;
+	}
 	this->fixed_value = number << fract_;
 }
 
 Fixed::Fixed(const float number)
 {
+	const int max_fixed = static_cast<float>(roundf(INT_MAX / (1 << fract_)));
+	const int min_fixed = static_cast<float>(roundf(INT_MIN / (1 << fract_)));
+
 	std::cout << "Float constructor called" << std::endl;
+	if (number > static_cast<float>(INT_MAX) / (1 << fract_) ||
+		number < static_cast<float>(INT_MIN) / (1 << fract_))
+	{
+		std::cout << "Float out of range. Max representation created" << std::endl;
+		if (number > max_fixed)
+			this->fixed_value = max_fixed / (1 << fract_);
+		else
+			this->fixed_value = min_fixed / (1 << fract_);
+	}
 	this->fixed_value = roundf(number * (1 << fract_));
 }
 

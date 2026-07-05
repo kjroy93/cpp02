@@ -6,7 +6,7 @@
 /*   By: kmarrero <kmarrero@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/06/05 19:09:19 by kjroydev          #+#    #+#             */
-/*   Updated: 2026/06/07 19:46:51 by kmarrero         ###   ########.fr       */
+/*   Updated: 2026/07/05 18:57:31 by kmarrero         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,6 +14,7 @@
 # define FIXED_CPP
 # include <iostream>
 # include <cmath>
+# include <climits>
 
 class	Fixed
 {
@@ -45,7 +46,7 @@ class	Fixed
 		Fixed&	operator--();
 		Fixed	operator++(int);
 		Fixed	operator--(int);
-		static Fixed&	min(Fixed& f1, Fixed& f2);
+		static Fixed&		min(Fixed& f1, Fixed& f2);
 		static const Fixed&	min(const Fixed& f1, const Fixed& f2);
 		static Fixed&		max(Fixed& f1, Fixed& f2);
 		static const Fixed&	max(const Fixed& f1, const Fixed& f2);
