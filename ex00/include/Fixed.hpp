@@ -5,8 +5,8 @@
 /*                                                    +:+ +:+         +:+     */
 /*   By: kmarrero <kmarrero@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2026/06/05 19:09:19 by kjroydev          #+#    #+#             */
-/*   Updated: 2026/07/05 17:39:48 by kmarrero         ###   ########.fr       */
+/*   Created: 2026/07/06 13:53:27 by kmarrero          #+#    #+#             */
+/*   Updated: 2026/07/06 13:55:29 by kmarrero         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,6 @@
 # define FIXED_CPP
 # include <iostream>
 # include <climits>
-# include <string>
 
 class	Fixed
 {

@@ -5,8 +5,8 @@
 /*                                                    +:+ +:+         +:+     */
 /*   By: kmarrero <kmarrero@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2026/06/05 19:19:21 by kjroydev          #+#    #+#             */
-/*   Updated: 2026/07/05 17:40:42 by kmarrero         ###   ########.fr       */
+/*   Created: 2026/07/06 13:53:20 by kmarrero          #+#    #+#             */
+/*   Updated: 2026/07/06 13:53:22 by kmarrero         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -45,5 +45,5 @@ int		Fixed::getRawBits(void) const
 
 Fixed::~Fixed()
 {
-	std::cout << "Desctructor called" << std::endl;
+	std::cout << "Destructor called" << std::endl;
 }
